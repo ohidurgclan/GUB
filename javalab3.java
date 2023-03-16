@@ -6,10 +6,44 @@ package com.mycompany.javalandtransport;
  */
 class car {
    String engineNo, bodyColor;
-   int x, y, iv, mf = 100, cf;
+   int x, y, iv = 0, mf = 100, cf;
    car(String en, String bc, int iv, int mf, int cf){
-
-   
+       this.engineNo = en;
+       this.bodyColor = bc;
+       this.iv = iv;
+       this.mf = mf;
+       this.cf = cf;
+   }
+   void up(){
+        y += iv;
+        cf = mf - 1;
+   }
+   void up(int a){
+        y += a;
+        cf = mf - 1;
+   }
+   void down(){
+        y -= iv;
+   }
+   void down(int a){
+        y -= a;
+        cf = mf - 1;
+   }
+   void left(){
+        x -= iv;
+        cf = mf - 1;
+   }
+   void left(int a){
+        x -= a;
+        cf = mf - 1;
+   }
+   void right(){
+        x += iv;
+        cf = mf - 1;
+   }
+   void right(int a){
+        x += a;
+        cf = mf - 1;
    }
 }
 class cycle{
