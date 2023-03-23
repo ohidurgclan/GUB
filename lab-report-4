@@ -1,0 +1,59 @@
+package sa.operatevaicle;
+
+/* 
+ * @author Md Ohidur Rahman
+ * @studentID 221002406
+ */
+ /* -- Vaicle Class -- */
+class Vehicle {
+
+    int speed;
+
+    void applybrake(int a) {
+        speed -= a;
+    }
+
+    void speedup(int a) {
+        speed += a;
+    }
+
+    void addspeed(int speed) {
+        this.speed = speed;
+    }
+}
+
+/* -- Car Classs -- */
+class Car extends Vehicle {
+
+    String carName;
+    int gear;
+
+    Car(String name, int gr, int spd) {
+        super.speed = spd;
+        this.carName = name;
+        this.gear = gr;
+        System.out.println("Vehicle Name  " + carName + " Speed  " + speed + " Gear  " + gear);
+    }
+}
+
+/* -- Bicycle Class -- */
+class Bicycle extends Vehicle {
+
+    String bikeName;
+    int gear;
+
+    Bicycle(String name, int gr, int spd) {
+        super.speed = spd;
+        this.bikeName = name;
+        this.gear = gr;
+        System.out.println("Vehicle Name  " + bikeName + " Speed  " + speed + " Gear  " + gear);
+    }
+}
+
+public class OperateVaicle {
+
+    public static void main(String[] args) {
+        Car sedan = new Car("Sedan", 2, 76);
+        Bicycle Nix = new Bicycle("Nix", 2, 26);
+    }
+}
