@@ -1,0 +1,24 @@
+package sa.teachergub;
+
+/* 
+ * @author Md Ohidur Rahman
+ * @studentID 221002406
+ */
+class Teacher{
+    String teacherName;
+    void Teacher(String nm){
+        this.teacherName = nm;
+        System.out.println("Teacher Name " + teacherName);
+    }
+
+}
+class CSETeacher extends Teacher{
+    int gubTeacher;
+}
+public class TeacherGub {
+
+    public static void main(String[] args) {
+        CSETeacher ob = new CSETeacher();
+        ob.Teacher("Chairman");
+    }
+}
